@@ -6,6 +6,7 @@ class Program
     {
         int selection = 0;
         Journal journal = new Journal();
+        string fileName;
         Console.WriteLine("Welcome to the Journal Program");
 
         do
@@ -59,24 +60,26 @@ class Program
             else if (selection == 3)
             {
                 Console.WriteLine("What is the file to load");
-                string fileName = Console.ReadLine();
+                fileName = Console.ReadLine();
 
                 journal.LoadFromFile(fileName);
             }
             else if (selection == 4)
             {
                 Console.WriteLine("What is the filename where the journal will be save?");
-                string fileName = Console.ReadLine();
+                fileName = Console.ReadLine();
 
                 journal.SaveToFile(fileName);
-            }else if (selection == 5)
+            }
+            else if (selection == 5)
             {
                 Console.WriteLine("Goodbye");
             }
             else
             {
                 Console.WriteLine("Error: Entry not correct");
-            };
+            }
+            ;
 
 
         } while (selection != 5);
