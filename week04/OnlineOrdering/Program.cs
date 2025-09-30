@@ -30,9 +30,9 @@ class Program
         Customer customer2 = new Customer("Marge Simpson", address2);
 
         // Products for the second order
-        Product product4 = new Product("Milk", 004, 2, 3);     // Precio unitario: 3
-        Product product5 = new Product("Bread", 005, 1, 2);    // Precio unitario: 2
-        Product product6 = new Product("Butter", 006, 12, 2);  // Precio unitario: 0.5
+        Product product4 = new Product("Milk", 004, 2, 3);     
+        Product product5 = new Product("Bread", 005, 1, 2);    
+        Product product6 = new Product("Butter", 006, 12, 2);  
 
         List<Product> products2 = new List<Product> { product4, product5, product6 };
 

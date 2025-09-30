@@ -31,6 +31,7 @@ public class Order
 
     public void Label()
     {
+        Console.WriteLine("ID - Name - Price per Unit - Quantity - Total Price");
         for (int i = 0; i < _products.Count; i++)
         {
             _products[i].DisplayLabel();
@@ -40,5 +41,6 @@ public class Order
     public void Shipping()
     {
         _customer.Display();
+        Console.WriteLine("Shipping Cost: " + (_customer.IsLivingInUSA() ? "$5" : "$35"));
     }
 }
