@@ -2,6 +2,7 @@ public class ListingActivity : Activity
 {
     int _count;
     List<string> _prompts = new List<string>();
+    private List<string> _unusedPromts = new List<string>();
 
     public ListingActivity()
     {
@@ -32,7 +33,7 @@ public class ListingActivity : Activity
         DisplayEndingMessage();
     }
 
-    public string GetRandomPromt()
+    public string GetRandomPrompt()
     {
         if (_unusedPromts.Count == 0)
         {
@@ -43,7 +44,7 @@ public class ListingActivity : Activity
         int index = random.Next(_unusedPromts.Count);
         string selectedPrompt = _unusedPromts[index];
 
-        _unsedPromts.RemoveAt(index);
+        _unusedPromts.RemoveAt(index);
 
         Console.WriteLine($"--- {selectedPrompt} ---");
 
@@ -66,5 +67,10 @@ public class ListingActivity : Activity
         }
 
         return listStrings;
+    }
+
+    private void ResetUnusedPrompts()
+    {
+        _unusedPromts = new List<string>(_prompts);
     }
 }
