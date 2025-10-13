@@ -20,6 +20,6 @@ public class Product
 
     public void DisplayLabel()
     {
-        Console.WriteLine($"{_id} - {_name}");
+        Console.WriteLine($"{_id} - {_name} - ${_price} x {_quantity} = ${GetTotalCost()}");
     }
 }
