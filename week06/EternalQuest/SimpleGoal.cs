@@ -9,10 +9,11 @@ public class SimpleGoal : Goal
 
     public override void RecordEvent()
     {
-
+        _isComplete = true;
+        base.RecordEvent();
     }
 
-    public override bool isComplete()
+    public override bool IsComplete()
     {
         return _isComplete;
     }

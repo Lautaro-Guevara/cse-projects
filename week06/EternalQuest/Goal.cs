@@ -12,7 +12,7 @@ public class Goal{
 
     public virtual void RecordEvent()
     {
-
+        Console.WriteLine("Congratulations! You have earned " + this._points + " points!");
     }
 
     public virtual bool IsComplete()
@@ -20,13 +20,24 @@ public class Goal{
         return false;
     }
 
-    public string GetDetails()
+    public virtual string GetDetailsString()
     {
-        return $"Short Name: {_shortName}\nDescription: {_description}\nPoints: {_points}";
+        string checkbox = IsComplete() ? "[X]" : "[ ]";
+        return $"{checkbox} {_shortName} ({_description})";
     }
 
     public virtual string GetStringRepresentation()
     {
-        return "";
+        return $"{_shortName}|{_description}|{_points}";
+    }
+
+    public string GetPoints()
+    {
+        return _points;
+    }
+
+    public string GetShortName()
+    {
+        return _shortName;
     }
 }

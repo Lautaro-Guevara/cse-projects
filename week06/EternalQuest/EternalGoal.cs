@@ -6,7 +6,7 @@ public class EternalGoal : Goal
 
     public override void RecordEvent()
     {
-        // Eternal goals are never completed, so no action is needed here.
+        base.RecordEvent();
     }
 
     public override bool IsComplete()

@@ -14,15 +14,28 @@ public class ChecklistGoal : Goal
 
     public override void RecordEvent()
     {
-        if (_amountCompleted < _target)
+        _amountCompleted++;
+        
+        if (IsComplete())
         {
-            _amountCompleted++;
+
+            Console.WriteLine($"Congratulations! You have completed the checklist goal and earned a bonus of {_bonus} points!");
+            Console.WriteLine("You have earned" + (int.Parse(this.GetPoints()) + _bonus) + " points in total!");
+        }
+        else
+        {
+            base.RecordEvent();
         }
     }
 
     public override bool IsComplete()
     {
         return _amountCompleted >= _target;
+    }
+
+    public override string GetDetailsString()
+    {
+        return $"{base.GetDetailsString()} -- Currently completed: {_amountCompleted}/{_target}";
     }
 
     public override string GetStringRepresentation()

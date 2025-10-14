@@ -1,0 +1,4 @@
+50
+SimpleGoal|Dar testimonio|Dar un testimonio en la reunion sacramental|50|False
+EternalGoal|Ir al templo|Ir al templo una vez al año|100
+ChecklistGoal|Mirar Conferencia General|Mirar las 5 sesiones de la conferencia general|50|1|5|300
